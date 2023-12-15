@@ -1,0 +1,214 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="24c7b452-d505-4b4a-abf0-cd308e7557e9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Nortwind DW</ID>
+  <Name>Nortwind DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Nortwind DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Nortwind_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Nortwind_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4ee24471-8661-42b1-af33-430f55085f19">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Employees" msprop:DbTableName="Employees" msprop:FriendlyName="Employees" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f44051c3-8028-418f-bb6c-fdf927fa61c3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msprop:FriendlyName="EmployeeID" msprop:DbColumnName="EmployeeID" msprop:design-time-name="2e2d3700-8155-42a9-a331-6cfab52f345a" type="xs:int" />
+                  <xs:element name="LastName" msprop:FriendlyName="LastName" msprop:DbColumnName="LastName" msprop:design-time-name="c7281356-a956-430e-a443-adb7e565d636">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FirstName" msprop:FriendlyName="FirstName" msprop:DbColumnName="FirstName" msprop:design-time-name="7171a3ba-652c-453c-a6c7-30c956657472">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Title" msprop:FriendlyName="Title" msprop:DbColumnName="Title" msprop:design-time-name="774f3276-4a78-49f6-aae9-036afa0437a1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TitleOfCourtesy" msprop:FriendlyName="TitleOfCourtesy" msprop:DbColumnName="TitleOfCourtesy" msprop:design-time-name="22cda882-16a1-4169-8648-b06044597ce5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BirthDate" msprop:FriendlyName="BirthDate" msprop:DbColumnName="BirthDate" msprop:design-time-name="00dcb3c7-f23e-4174-b706-75d5002f37c6" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="HireDate" msprop:FriendlyName="HireDate" msprop:DbColumnName="HireDate" msprop:design-time-name="ba1691ef-b836-4b18-9b77-41f83c191e98" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Address" msprop:FriendlyName="Address" msprop:DbColumnName="Address" msprop:design-time-name="5f6896b7-f7a1-49c5-a699-8e37607ef561" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:FriendlyName="City" msprop:DbColumnName="City" msprop:design-time-name="b9f9c0c1-99bd-4d31-b8fc-a22d3621a3c0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Region" msprop:FriendlyName="Region" msprop:DbColumnName="Region" msprop:design-time-name="9cb6a4c2-3d4e-4203-b2fa-b8b722510c10" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PostalCode" msprop:FriendlyName="PostalCode" msprop:DbColumnName="PostalCode" msprop:design-time-name="f11fb618-5be2-49c6-8ba5-5728db543fe3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Country" msprop:FriendlyName="Country" msprop:DbColumnName="Country" msprop:design-time-name="5d1cf557-57c5-46a2-a915-2389f44c25bf" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HomePhone" msprop:FriendlyName="HomePhone" msprop:DbColumnName="HomePhone" msprop:design-time-name="fb91129b-dd78-45a5-a043-20ca4e210c87" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="24" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Extension" msprop:FriendlyName="Extension" msprop:DbColumnName="Extension" msprop:design-time-name="0b0f7cc7-9d89-43ad-ae3c-1c410e0277cd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Photo" msprop:DataSize="2147483647" msprop:FriendlyName="Photo" msprop:DbColumnName="Photo" msprop:design-time-name="1b25dbed-4546-4169-91ec-599e8920742a" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="Notes" msprop:FriendlyName="Notes" msprop:DbColumnName="Notes" msprop:design-time-name="b1a744ee-5140-48df-9eed-91b6d8a9eb2f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1073741823" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ReportsTo" msprop:FriendlyName="ReportsTo" msprop:DbColumnName="ReportsTo" msprop:design-time-name="c185d54a-c6a4-4ce8-9d4c-686065f99b5f" type="xs:int" minOccurs="0" />
+                  <xs:element name="PhotoPath" msprop:FriendlyName="PhotoPath" msprop:DbColumnName="PhotoPath" msprop:design-time-name="5659550e-bcd8-4943-98fb-b7ecd0d2aa3b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_TablaHechoEmpleadosTerritorios" msprop:DbTableName="TablaHechoEmpleadosTerritorios" msprop:FriendlyName="TablaHechoEmpleadosTerritorios" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="1b4dfde1-13eb-4135-b6f4-d4d77e9cd005">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msprop:FriendlyName="EmployeeID" msprop:DbColumnName="EmployeeID" msprop:design-time-name="cdcd7ff8-f4fd-44c3-87e2-7e315857cf05" type="xs:int" minOccurs="0" />
+                  <xs:element name="TerritoryID" msprop:FriendlyName="TerritoryID" msprop:DbColumnName="TerritoryID" msprop:design-time-name="7a054f28-ccc1-4ce3-9c1f-30de20e323c4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TipeJob" msprop:FriendlyName="TipeJob" msprop:DbColumnName="TipeJob" msprop:design-time-name="5c4e3d13-b263-4b11-adee-cac82046f163">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Territories" msprop:DbTableName="Territories" msprop:FriendlyName="Territories" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="023bf540-30e5-4a37-8f54-1b676d30410d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TerritoryID" msprop:FriendlyName="TerritoryID" msprop:DbColumnName="TerritoryID" msprop:design-time-name="0ef718d2-15d7-4d90-a7d0-a1e4bdeb6f9e">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TerritoryDescription" msprop:FriendlyName="TerritoryDescription" msprop:DbColumnName="TerritoryDescription" msprop:design-time-name="65d849f8-6993-4b38-902c-6fcb5fb0f54a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RegionID" msprop:FriendlyName="RegionID" msprop:DbColumnName="RegionID" msprop:design-time-name="99917ab9-2051-456e-83f2-7779775b1b25" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Employees" />
+          <xs:field xpath="EmployeeID" />
+        </xs:unique>
+        <xs:unique name="dbo_Territories_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Territories" />
+          <xs:field xpath="TerritoryID" />
+        </xs:unique>
+        <xs:keyref name="FK__TablaHech__Terri__45F365D3" refer="dbo_Territories_Constraint1">
+          <xs:selector xpath=".//dbo_TablaHechoEmpleadosTerritorios" />
+          <xs:field xpath="TerritoryID" />
+        </xs:keyref>
+        <xs:keyref name="FK__TablaHech__Emplo__44FF419A" refer="Constraint1">
+          <xs:selector xpath=".//dbo_TablaHechoEmpleadosTerritorios" />
+          <xs:field xpath="EmployeeID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Nortwind_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

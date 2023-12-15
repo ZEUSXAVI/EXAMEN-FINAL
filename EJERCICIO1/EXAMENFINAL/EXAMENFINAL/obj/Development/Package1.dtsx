@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/14/2023 12:32:50 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0JLQJJL"
+  DTS:CreatorName="DESKTOP-0JLQJJL\XAVI"
+  DTS:DTSID="{267EAADA-FC3E-472D-9E40-7C1356F7E0AB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5396.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{391A541E-7DBB-4195-9C9E-10D37946A5EA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).nortmid]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FF9AE3A9-D4F8-46B6-B986-BD9D99BB34E8}"
+      DTS:ObjectName="(local).nortmid">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=nortmid;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{FF9AE3A9-D4F8-46B6-B986-BD9D99BB34E8}(local).nortmid;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{81AE5052-B042-4DD2-B592-EF8DFCE1C8D1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FF9AE3A9-D4F8-46B6-B986-BD9D99BB34E8}"
+          SQLTask:SqlStatementSource="CREATE TABLE &quot;Employees&quot; (&#xA;&#x9;&quot;EmployeeID&quot; &quot;int&quot; PRIMARY KEY NOT NULL ,&#xA;&#x9;&quot;LastName&quot; nvarchar (20) NOT NULL ,&#xA;&#x9;&quot;FirstName&quot; nvarchar (10) NOT NULL ,&#xA;&#x9;&quot;Title&quot; nvarchar (30) NULL ,&#xA;&#x9;&quot;TitleOfCourtesy&quot; nvarchar (25) NULL ,&#xA;&#x9;&quot;BirthDate&quot; &quot;datetime&quot; NULL ,&#xA;&#x9;&quot;HireDate&quot; &quot;datetime&quot; NULL ,&#xA;&#x9;&quot;Address&quot; nvarchar (60) NULL ,&#xA;&#x9;&quot;City&quot; nvarchar (15) NULL ,&#xA;&#x9;&quot;Region&quot; nvarchar (15) NULL ,&#xA;&#x9;&quot;PostalCode&quot; nvarchar (10) NULL ,&#xA;&#x9;&quot;Country&quot; nvarchar (15) NULL ,&#xA;&#x9;&quot;HomePhone&quot; nvarchar (24) NULL ,&#xA;&#x9;&quot;Extension&quot; nvarchar (4) NULL ,&#xA;&#x9;&quot;Photo&quot; &quot;image&quot; NULL ,&#xA;&#x9;&quot;Notes&quot; &quot;ntext&quot; NULL ,&#xA;&#x9;&quot;ReportsTo&quot; &quot;int&quot; NULL ,&#xA;&#x9;&quot;PhotoPath&quot; nvarchar (255) NULL &#xA;)&#xA;&#xA;CREATE TABLE [dbo].[Territories] &#xA;&#x9;([TerritoryID] [nvarchar] (20) PRIMARY KEY NOT NULL ,&#xA;&#x9;[TerritoryDescription] [nchar] (50) NOT NULL ,&#xA;        [RegionID] [int] NOT NULL&#xA;)&#xA;&#xA;CREATE TABLE TablaHechoEmpleadosTerritorios (&#xA;    EmployeeID INT,&#xA;    TerritoryID NVARCHAR(20),&#xA;    TipeJob NVARCHAR(50) NOT NULL,&#xA;    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),&#xA;    FOREIGN KEY (TerritoryID) REFERENCES Territories(TerritoryID),&#xA;    -- Añade otras claves foráneas según la estructura de tus tablas originales&#xA;    -- Las claves foráneas están asociadas a las tablas Employees y Territories con sus correspondientes columnas&#xA;    -- Esta clave foránea está asociada a la columna RegionID en la tabla Territories&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{6F320241-91E0-4C8F-A406-C6BAF7C104A2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FF9AE3A9-D4F8-46B6-B986-BD9D99BB34E8}"
+          SQLTask:SqlStatementSource="--LLENAR DATOS&#xA;&#xA;INSERT INTO nortmid.dbo.Employees&#xA;SELECT * &#xA;FROM final.dbo.Employees&#xA;&#xA;INSERT INTO nortmid.dbo.Territories&#xA;SELECT * &#xA;FROM final.dbo.Territories&#xA;&#xA;&#xA;--TABLA DE HECHOS&#xA;INSERT INTO TablaHechoEmpleadosTerritorios (EmployeeID, TerritoryID, TipeJob)&#xA;SELECT e.EmployeeID, t.TerritoryID, 'programador'&#xA;FROM Employees e&#xA;CROSS JOIN Territories t;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{C3E64CF5-B84E-4BDC-B475-F53D276CB01C}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Tarea Ejecutar SQL 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="378,76" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Tarea Ejecutar SQL 1"
+          TopLeft="376,182" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="464.25,118">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
